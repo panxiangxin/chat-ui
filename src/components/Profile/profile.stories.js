@@ -1,0 +1,10 @@
+/* eslint-disable import/no-anonymous-default-export */
+import React from "react";
+import Profile from ".";
+
+export default {
+  title: "页面组件/Profile",
+  component: Profile,
+};
+
+export const Default = () => <Profile />;
