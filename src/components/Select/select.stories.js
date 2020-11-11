@@ -14,3 +14,10 @@ export const Default = () => (
     <Option>最新消息有限</Option>
   </Select>
 );
+
+export const FormSelect = () => (
+  <Select type="form">
+    <Option>最新消息有限</Option>
+    <Option>最新消息有限</Option>
+  </Select>
+);
