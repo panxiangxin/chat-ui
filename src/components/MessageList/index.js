@@ -7,15 +7,14 @@ import Option from "components/Option";
 import Button from "components/Button";
 import Icon from "components/Icon";
 import { ReactComponent as Plus } from "assets/icons/plus.svg";
-import Input from "components/Input";
 import MessageCard from "components/MessageCard";
 import face1 from "assets/images/face-male-1.jpg";
+import FilterList from "components/FilterList";
 
 function MessageList({ children, ...rest }) {
   return (
     <StyledMessageList {...rest}>
-      <Input.Search></Input.Search>
-      <ChatFilter></ChatFilter>
+      <FilterList options={["最新消息优先","在线好友优先"]} actionLabel="创建会话">
       <ChatList>
         {[1, 2, 3, 4, 5, 6].map((_, index) => (
           <MessageCard
@@ -32,6 +31,8 @@ function MessageList({ children, ...rest }) {
           ></MessageCard>
         ))}
       </ChatList>
+      </FilterList>
+     
     </StyledMessageList>
   );
 }
