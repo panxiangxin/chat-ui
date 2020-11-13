@@ -10,6 +10,8 @@ import Switch from "components/Switch";
 import Icon from "components/Icon";
 import { ReactComponent as ArrowMenuRight } from "assets/icons/arrowMenuRight.svg";
 import Seperator from "components/Seperator";
+import { Link } from "react-router-dom";
+import "styled-components/macro";
 
 function Settings({ children, ...rest }) {
   return (
@@ -27,7 +29,15 @@ function Settings({ children, ...rest }) {
         <SettingsItem label="语音和视频通话提醒"></SettingsItem>
         <SettingsItem label="显示通知详情"></SettingsItem>
         <SettingsItem label="声音"></SettingsItem>
-        <SettingsItem label="查看已静音的好友" type="menu"></SettingsItem>
+        <Link
+          to={`/settings/blocked`}
+          css={`
+            text-decoration: none;
+            color: inherit;
+          `}
+        >
+          <SettingsItem label="查看已静音的好友" type="menu"></SettingsItem>
+        </Link>
       </SettingGroup>
     </StyledSettings>
   );

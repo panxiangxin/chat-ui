@@ -8,10 +8,12 @@ import Emoji from "components/Emoji";
 import Footer from "components/Footer";
 import face from "assets/images/face-male-1.jpg";
 
-function Conversation({ children, ...rest }) {
+function Conversation({ onAvatarClick, onVideoClick, children, ...rest }) {
   return (
     <StyledConversation {...rest}>
       <TitleBar
+        onAvatarClick={onAvatarClick}
+        onVideoClick={onVideoClick}
         avatarUrl={face}
         status="offline"
         statusText="离线"

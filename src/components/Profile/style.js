@@ -43,7 +43,7 @@ const Album = styled.div`
 `;
 
 const Photo = styled.img`
-  widows: 76px;
+  width: 76px;
   height: 76px;
   object-fit: cover;
 `;
@@ -57,7 +57,7 @@ const CloseIcon = styled(Icon).attrs({ opacity: 0.3 })`
 
 const StyledProfile = styled.div`
   display: grid;
-  align-items: center;
+  align-content: start;
   justify-content: center;
   justify-items: center;
   position: relative;

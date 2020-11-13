@@ -1,12 +1,17 @@
+import ChatApp from "components/ChatApp";
+import { ThemeProvider } from "styled-components";
+import theme from "theme";
 import "./App.css";
-import useColorSwitch from "./useColorSwitch";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  const [color, handleButton1Click] = useColorSwitch();
-
-  const [color2, handleButton2Click] = useColorSwitch("#0000ff", "#ff00ff");
-
-  return <div></div>;
+  return (
+    <Router>
+      <ThemeProvider theme={theme}>
+        <ChatApp></ChatApp>
+      </ThemeProvider>
+    </Router>
+  );
 }
 
 export default App;

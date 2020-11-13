@@ -1,6 +1,6 @@
 import Heading from "components/Heading";
 import Pargraph from "components/Pargraph";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { card } from "utils/mixins";
 
 const NoteImage = styled.img`
